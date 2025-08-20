@@ -1,3 +1,3 @@
 
-# AGENTIC Chatbot using Langgraph framework
+# AGENTIC PROJECTS
 
