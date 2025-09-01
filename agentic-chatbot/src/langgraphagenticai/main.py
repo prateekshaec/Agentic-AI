@@ -20,9 +20,12 @@ def load_langgraph_agenticai_app():
     if not user_input:
         st.error("Error: Failed to load user input from the UI.")
         return
-    ##st.chat_input() creates a chat-style input box at the bottom of the Streamlit app, 
-    # similar to how you see a message box in chat apps (like WhatsApp or ChatGPT).
-    user_message = st.chat_input("Enter your message:")
+    
+    # Text input for user message
+    if st.session_state.IsFetchButtonClicked:
+        user_message = st.session_state.timeframe 
+    else :
+        user_message = st.chat_input("Enter your message:")
 
     if user_message:
         try:
